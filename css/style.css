@@ -30,6 +30,7 @@ CSS TABLE OF CONTENTS
 
 # UI COMPONENTS
     # BUTTONS
+    # SIMPLE CARD
 
 # ANIMATION
     # SMOOTH SCROLLING
@@ -70,7 +71,7 @@ CSS TABLE OF CONTENTS
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
     
-    --color-hero-background: rgb(100 100 100);
+    --color-hero-background: rgb(75 177 173);
     --color-hero-text: rgb(255, 255, 255);
     --color-hero-headings: rgb(255, 255, 255);
     
@@ -613,7 +614,7 @@ section {
 }
 
 /* ----------------- */
-/* -- COMPONENTS --- */
+/* --UI COMPONENTS--- */
 /* ----------------- */
 
 /* BUTTONS */
@@ -654,6 +655,21 @@ section {
     }
 
 
+}
+
+/* SIMPLE CARD */
+
+.centered-card-group {
+    display: flex;
+    justify-content: center;
+    gap: var(--unit-small);
+    
+    .centered-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: var(--unit-small);
+    
+    }
 }
 
 
