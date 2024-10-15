@@ -1,4 +1,4 @@
 # groovdonuts-framework
 a framework for goov donuts website
 
-[View Demo](https://github.com/Mfiocco/groovdonuts-framework/index.htm/)
+[View my site](https://mfiocco.github.io/groovdonuts-framework)
