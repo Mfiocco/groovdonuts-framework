@@ -82,8 +82,8 @@ CSS TABLE OF CONTENTS
 
 
     /*  DEFINE ALL FONTS USED HERE */
-    --font-body: Helvetica, Arial, sans-serif;
-    --font-headings: Georgia, serif;
+    --font-body: "Afacad", serif;
+    --font-headings: "Anton", serif;
 
     /* SIZING UNITS */
     --container-width: 1100px;
@@ -621,10 +621,15 @@ section {
 .button {
     /* SET BUTTON COLORS */
     border: 1px solid var(--color-links-dark);
+    border-radius: 15px;
     background-color: var(--color-links-dark);
     color: white;
 
-    /* ENABLE OX MODEL STYLING */
+    font-family: "Alumni Sans", serif;
+    font-weight: bold;
+ 
+
+    /* ENABLE BOX MODEL STYLING */
     display: inline-block;
     padding: var(--unit-small);
     margin: var(--unit-small) 0;
