@@ -76,10 +76,10 @@ CSS TABLE OF CONTENTS
     --color-hero-text: rgb(255, 255, 255);
     --color-hero-headings: rgb(255, 255, 255);
     
-    --color-sitefooter-background: rgb(100 100 100);
+    --color-sitefooter-background: #FFEED0;
     --color-sitefooter-text: rgb(255 255 255 / .8);
     --color-sitefooter-headings: rgb(255 255 255 / 1);
-    --color-sitefooter-links: rgb(255 255 255);
+    --color-sitefooter-links: #747474;
 
 
     /*  DEFINE ALL FONTS USED HERE */
@@ -87,13 +87,14 @@ CSS TABLE OF CONTENTS
     --font-headings: "Anton", serif;
 
     /* SIZING UNITS */
-    --container-width: 1100px;
+    --container-width: 1600px;
     --unit-small: 1em;
     --unit-medium: 2em;
     --unit-large: 4em;
 
 
 }
+
 
 /* GLOBAL RESET */
 
@@ -123,10 +124,12 @@ h1, h2, h3 {
 a {
     /* SET THE COLOR OF ALL TEXT LINKS */
     color: var(--color-links);
+    text-decoration: none;
 
     /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
     &:hover {
         color: var(--color-links-hover);
+        text-decoration: none;
     }
 
 }
@@ -153,8 +156,9 @@ h1, h2, h3 {
 
 h1 {
     /* SET H1 FONT SIZE AND LEADING*/
-    font-size: 3em;
+    font-size: 5em;
     line-height: 1.1;
+    font-weight: 400;
 }
 
 
@@ -188,6 +192,12 @@ img {
     /* MAKE ALL IMAGES SHRINK ON SMALL SCREENS */
     max-width: 100%;
     height: auto; 
+}
+
+.donuts-horizontal {
+    width: 100%;
+    height: 100%;
+    opacity: 35%;
 }
 
 
@@ -406,8 +416,8 @@ body {
 
     .toggle-menu {
 
-        --color-togglemenu-background: rgb(38, 38, 38);
-        --color-togglemenu-text: rgb(78, 230, 225);
+        --color-togglemenu-background: #FFEED0;
+        --color-togglemenu-text: #7C5B04;
 
         display: flex;
         flex-direction: row-reverse;
@@ -567,6 +577,41 @@ section {
     padding: var(--unit-large) var(--unit-small);
 }
 
+#home-section1 {
+    background-color: #FAE9BB;
+    text-align: center;
+    /* padding: 0;
+    margin: 0; */
+    
+    h1 {
+        color: #fff;
+        font-size: 6e;
+    }
+    h4 {
+        color: #7C5B04;
+    }
+    p {
+        color: #886916;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+#home-section2 {
+    background-color: #CBE5E5;
+
+    h1 {
+        color: #336869;
+    }
+}
+#home-section3 {
+    background-color: #ECBDAC;
+
+    h1 {
+        color: #AE3B30;
+        /* text-align: right; */
+    }
+}
 /* HERO SECTION */
 
 .hero {
@@ -574,7 +619,7 @@ section {
     color: var(--color-hero-text);
 
     h1 {
-        font-size: 5em;
+        font-size: 7em;
     }
 
    
@@ -597,7 +642,7 @@ section {
     }
 
     a {
-        color: var(--color-links-light);
+        color: var(--color-sitefooter-links);
         
         &:hover {
             color: var(--color-links-lighter);
@@ -609,9 +654,28 @@ section {
             list-style: none;
             margin: 0;
             padding: 0;
+            font-family: var(--font-headings);
+            font-size: 4em;
+            line-height: 1.75em;
             
         }
     }
+
+    .footer-logo {
+        background-color: #5DAAB2;
+        margin: 3em 0 0 0;
+    }
+
+}
+
+.footer-business-info {
+    color: #CCCCCC;
+    background-color: #545454;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 1em;
+    gap: 36.5em;
 }
 
 /* ----------------- */
@@ -622,17 +686,18 @@ section {
 .button {
     /* SET BUTTON COLORS */
     border: 1px solid var(--color-links-dark);
-    border-radius: 15px;
+    border-radius: 18px;
     background-color: var(--color-links-dark);
     color: white;
 
     font-family: "Alumni Sans", serif;
     font-weight: bold;
+    font-size: 1.7em;
  
 
     /* ENABLE BOX MODEL STYLING */
     display: inline-block;
-    padding: var(--unit-small);
+    padding: .3em 1em .3em 1em;
     margin: var(--unit-small) 0;
 
     /* GET RID OF UNDERLINE */
