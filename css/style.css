@@ -37,6 +37,7 @@ CSS TABLE OF CONTENTS
     # SCROLL TRIGGERED ANIMATION
 
 # CUSTOM STYLING
+    # PAGE SPECIFIC STYLING
 
 --------------------------------
 --------------------------------
@@ -72,7 +73,7 @@ CSS TABLE OF CONTENTS
     --color-siteheader-background: transparent;
     --color-siteheader-links: var(--color-text-headings);
     
-    --color-hero-background: rgb(75 177 173);
+    --color-hero-background: rgb(255, 255, 255);
     --color-hero-text: rgb(255, 255, 255);
     --color-hero-headings: rgb(255, 255, 255);
     
@@ -455,7 +456,7 @@ body {
 
                 /* SET THE COLOR OF THE SVG TO MATCH */
                 svg {
-                    fill: var(--color-siteheader-links);
+                    fill: #6F6F6F;
                 }
 
                 /* ADD SUPPORT FOR SVG ANIMATION */
@@ -579,6 +580,10 @@ section {
 
 #home-section1 {
     background-color: #FAE9BB;
+    background-image: url(../img/home-section1img.png);
+    background-size: 100% 100%, contain;
+    background-position: center top;
+    background-repeat: no-repeat;
     text-align: center;
     /* padding: 0;
     margin: 0; */
@@ -599,6 +604,10 @@ section {
 }
 #home-section2 {
     background-color: #CBE5E5;
+    background-image: url(../img/bg-swirl-blue.png);
+    background-size: 100% 100%, contain;
+    background-position: center top;
+    background-repeat: no-repeat;
 
     h1 {
         color: #336869;
@@ -606,6 +615,10 @@ section {
 }
 #home-section3 {
     background-color: #ECBDAC;
+    background-image: url(../img/bg-swirl-red.png);
+    background-size: 100% 100%, contain;
+    /* background-position: center top; */
+    background-repeat: no-repeat;
 
     h1 {
         color: #AE3B30;
@@ -616,10 +629,13 @@ section {
 
 .hero {
     background-color: var(--color-hero-background);
+    background-image: linear-gradient(#AEF1EF, #4BB1AD);
     color: var(--color-hero-text);
 
     h1 {
         font-size: 7em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
    
@@ -790,3 +806,74 @@ html {
       scale: 1;
     }
   }
+
+
+/* PAGE SPECIFIC STYLING */
+
+.page-home {
+    .hero h1 {
+
+        .hero-flavors {
+            display: block;
+            border: 1px solid red;
+            animation: flavor-animation 1s forwards;
+        }
+
+        .hero-that {
+            display: inline-block;
+            border: 1px solid red;
+            rotate: -90deg;
+            transform-origin: left bottom ;
+            translate: 45% 35%;
+            scale: .75;
+            animation: that-animation 1s forwards;
+        }
+
+        .hero-vibe {
+            display: inline-block;
+            border: 1px solid red;
+            scale: 1.4;
+            translate: -65% 10%;
+            transform-origin: left top ;
+            animation: vibe-animation 1s forwards;
+        }
+
+
+
+    }
+
+
+}
+
+@keyframes flavor-animation {
+    0% {
+        translate: -100px 0;
+        opacity: 0;
+    }
+    100% {
+      translate: 0 0; 
+      opacity: 1;
+    }
+}
+
+@keyframes that-animation {
+    0% {
+        translate: 50px 50px;
+        opacity: 0;
+    }
+    100% {
+      translate: 45% 35%;
+      opacity: 1;
+    }
+}
+
+@keyframes vibe-animation {
+    0% {
+        translate: 100px 0;
+        opacity: 0;
+    }
+    100% {
+      translate: -65% 10%;
+      opacity: 1;
+    }
+}
